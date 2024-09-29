@@ -3,40 +3,60 @@ using UnityEngine;
 [System.Serializable]
 public class SaveData
 {
-    public int STR = 1;
-    public int AGI = 1;
-    public int INT = 1;
-    public int VIT = 1;
-    public int COINS = 0;
+    public int Strength         = 1;
+    public int Agility          = 1;
+    public int Intelligence     = 1;
+    public int Wisdom           = 1;
+    public int Vitality         = 1;
+    public int Durability       = 1;
+    public int Luck             = 1;
+    public int Greed            = 1;
+    public int Coins            = 1;
 
     public void HardReset()
     {
-        COINS = 0;
-        STR = 1;
-        AGI = 1;
-        INT = 1;
-        VIT = 1;
+        Strength        = 1;
+        Agility         = 1;
+        Intelligence    = 1;
+        Wisdom          = 1;
+        Vitality        = 1;
+        Durability      = 1;
+        Luck            = 1;
+        Greed           = 1;
+        Coins           = 0;
     }
 
 
     public void SoftReset(string bonusAttribute)
     {
-        COINS = 0;
+        Coins = 0;
 
         switch (bonusAttribute.ToLower())
         {
-            case "str":
-                STR += 1;
+            case "Strength":
+                Strength += 1;
                 break;
-            case "agi":
-                AGI += 1;
+            case "Agility":
+                Agility += 1;
                 break;
-            case "int":
-                INT += 1;
+            case "Intelligence":
+                Intelligence += 1;
                 break;
-            case "vit":
-                VIT += 1;
+            case "Wisdom":
+                Wisdom += 1;
                 break;
+            case "Vitality":
+                Vitality += 1;
+                break;
+            case "Durability":
+                Durability += 1;
+                break;
+            case "Luck":
+                Luck += 1;
+                break;
+            case "Greed":
+                Greed += 1;
+                break;           
             default:
                 Debug.LogWarning("incorrect attribute");
                 break;
