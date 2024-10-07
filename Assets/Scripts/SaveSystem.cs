@@ -1,6 +1,7 @@
 using System.IO;
 using UnityEngine;
 
+
 public static class SaveSystem
 {
     private static string saveFilePath = Application.persistentDataPath + "/savefile.json";

@@ -21,20 +21,17 @@ public class PlayerController : MonoBehaviour
         movement.x = joystick.Horizontal;
         movement.y = joystick.Vertical;
 
-        Debug.Log($"Joystick Input - Horizontal: {movement.x}, Vertical: {movement.y}");
 
         // Проверка, что джойстик отклонён больше, чем deadZone
         if (movement.magnitude > deadZone)
         {
             // Устанавливаем параметр Speed в аниматоре на величину скорости персонажа
             animator.SetFloat("Speed", movement.sqrMagnitude); // Используем квадрат длины вектора для оценки скорости
-            Debug.Log($"Player is moving. Speed: {movement.sqrMagnitude}");
         }
         else
         {
             // Если джойстик не активен, останавливаем анимацию движения
             animator.SetFloat("Speed", 0);
-            Debug.Log("Player is idle. Joystick in dead zone.");
         }
     }
 
@@ -43,15 +40,7 @@ public class PlayerController : MonoBehaviour
         // Двигаем персонажа только если джойстик отклонён больше порога
         if (movement.magnitude > deadZone)
         {
-            //rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
-            rb.MovePosition(rb.position + movement * speed );
-            Debug.Log("Player moved.");
-            Debug.Log("Vector: " + movement);
-            Debug.Log("Speed: " + speed);
-        }
-        else
-        {
-            Debug.Log("No movement. Player is stationary.");
+            rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
         }
     }
 }
