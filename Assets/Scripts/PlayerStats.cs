@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    public int level = 1;       // Текущий уровень
-    public int currentEXP = 0;   // Текущий опыт
-    public int requiredEXP = 100; // Сколько нужно опыта для следующего уровн
+    public int Level = 1;       // Текущий уровень
+    public int CurrentEXP = 0;   // Текущий опыт
+    public int RequiredEXP = 100; // Сколько нужно опыта для следующего уровн
 
     // FIGHT PARAMS
     public int FightStrength         = 1;
@@ -26,16 +26,16 @@ public class PlayerStats : MonoBehaviour
     // Функция для добавления опыта
     public void AddExperience(int Exp)
     {
-        currentEXP += Exp;
+        CurrentEXP += Exp;
         CheckLevelUp();
     }
 
     // Проверка, нужно ли повысить уровень
     private void CheckLevelUp()
     {
-        if (currentEXP >= requiredEXP)
+        if (CurrentEXP >= RequiredEXP)
         {
-            currentEXP -= requiredEXP;
+            CurrentEXP -= RequiredEXP;
             LevelUp();
         }
     }
@@ -43,9 +43,9 @@ public class PlayerStats : MonoBehaviour
     // Функция повышения уровня
     private void LevelUp()
     {
-        level++;
-        requiredEXP += 100 + level * 10; // Увеличение опыта, необходимого для следующего уровня
-        Debug.Log("Уровень повышен! Новый уровень: " + level);
+        Level++;
+        RequiredEXP += 100 + Level * 10; // Увеличение опыта, необходимого для следующего уровня
+        Debug.Log("Уровень повышен! Новый уровень: " + Level);
     }
 
     private void Start()
@@ -69,7 +69,7 @@ public class PlayerStats : MonoBehaviour
 
     public void CalculateBattleParams()
     {
-        magnetRange = FightGreed * 50 + itemBonusMagnet;
+        magnetRange = 20 + FightGreed + itemBonusMagnet;
     }
 
     
