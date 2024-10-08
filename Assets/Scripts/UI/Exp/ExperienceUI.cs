@@ -32,7 +32,7 @@ public class ExperienceUI : MonoBehaviour
             float expPercentage = (float)playerStats.CurrentEXP / playerStats.RequiredEXP;
             experienceSlider.fillAmount = expPercentage;
 
-            levelText.text = "Уровень: " + playerStats.Level;
+            levelText.text = " " + playerStats.Level;
         }
     }
 }

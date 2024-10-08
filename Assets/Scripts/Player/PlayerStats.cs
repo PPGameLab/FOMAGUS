@@ -16,6 +16,9 @@ public class PlayerStats : MonoBehaviour
     public int FightLuck             = 1;
     public int FightGreed            = 1;
 
+    public int maxHealth = 100;
+    public int currentHealth;
+
     // ITEM PARAMS
     public int itemBonusMagnet = 0;
 
@@ -38,6 +41,16 @@ public class PlayerStats : MonoBehaviour
             CurrentEXP -= RequiredEXP;
             LevelUp();
         }
+    }
+
+    public int GetCurrentHealth()
+    {
+        return currentHealth;
+    }
+
+    public int GetMaxHealth()
+    {
+        return maxHealth;
     }
 
     // Функция повышения уровня
@@ -70,7 +83,23 @@ public class PlayerStats : MonoBehaviour
     public void CalculateBattleParams()
     {
         magnetRange = 20 + FightGreed + itemBonusMagnet;
+        currentHealth = maxHealth;
     }
 
-    
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;   // Уменьшаем текущее здоровье
+
+        if (currentHealth <= 0)
+        {
+            Die();  // Если здоровье упало до нуля или ниже, вызываем смерть игрока
+        }
+    }
+
+    // Метод смерти игрока
+    private void Die()
+    {
+        Debug.Log("Player died!");  // Можно добавить логику для конца игры или перезапуска
+        // Здесь можно добавить логику смерти или респауна
+    }
 }
