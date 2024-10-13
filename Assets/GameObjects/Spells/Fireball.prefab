@@ -224,5 +224,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   damage: 50
-  searchRadius: 100
-  maxTravelDistance: 100
+  maxLifetime: 5

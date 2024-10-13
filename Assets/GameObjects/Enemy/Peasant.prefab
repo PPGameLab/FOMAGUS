@@ -129,7 +129,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lootPrefabs:
   - {fileID: 8777181761594787609, guid: 191df780d5964fd438230016c8511a03, type: 3}
-  lootDropChances: 64000000
+  - {fileID: 8777181761594787609, guid: 191df780d5964fd438230016c8511a03, type: 3}
+  - {fileID: 8777181761594787609, guid: 191df780d5964fd438230016c8511a03, type: 3}
+  - {fileID: 8777181761594787609, guid: 191df780d5964fd438230016c8511a03, type: 3}
+  lootDropChances: 64000000640000006400000064000000
   health: 50
   damage: 10
   attackCooldown: 2
