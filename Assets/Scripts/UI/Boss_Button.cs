@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Collections;
 
 public class Boss_Button : MonoBehaviour
 {
@@ -40,7 +41,6 @@ public class Boss_Button : MonoBehaviour
     public void ExitGame()
     {
         Application.Quit();
-        Debug.Log("GGWP");
     }
 
     // Логика для включения и выключения паузы
@@ -68,14 +68,27 @@ public class Boss_Button : MonoBehaviour
     // Возобновляем игру
     public void ContinueGame()
     {
+        StartCoroutine(ResumeGame());  // Используем корутину для возобновления
+    }
+
+    private IEnumerator ResumeGame()
+    {
         Time.timeScale = 1f;          // Возвращаем нормальное время
         if (pausePanel != null) pausePanel.SetActive(false);  // Скрываем панель паузы
+
+        // Принудительное обновление Canvas, чтобы кнопки сразу активировались
+        Canvas.ForceUpdateCanvases();
+
+        // Ждем 0.1 секунды перед тем, как сделать кнопку паузы активной (защита от случайных нажатий)
+        yield return new WaitForSecondsRealtime(0.1f);
+
+        pauseButton.interactable = true;  // Активируем кнопку паузы снова
     }
 
     // Логика для выхода в меню
     public void ExitToMenu()
     {
         Time.timeScale = 1f;          // Возвращаем нормальное время, если игра на паузе
-        SceneManager.LoadScene("MainMenuScene"); // Переход в главное меню
+        SceneManager.LoadScene("SC_GAME"); // Переход в главное меню
     }
 }
