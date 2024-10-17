@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 9877702}
   - component: {fileID: 9877704}
   - component: {fileID: 9877703}
-  m_Layer: 5
+  m_Layer: 16
   m_Name: BarHeath
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -344,7 +344,7 @@ GameObject:
   - component: {fileID: 354395330}
   - component: {fileID: 354395329}
   - component: {fileID: 354395328}
-  m_Layer: 5
+  m_Layer: 16
   m_Name: HP Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -621,7 +621,7 @@ GameObject:
   - component: {fileID: 383273581}
   - component: {fileID: 383273582}
   - component: {fileID: 383273583}
-  m_Layer: 3
+  m_Layer: 16
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -687,8 +687,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1062090225
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 2136754202, guid: 68ee9cb89d2ea2a4386ea23dc15b7083, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -710,7 +710,7 @@ Transform:
   m_GameObject: {fileID: 383273568}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 100}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1422,7 +1422,7 @@ GameObject:
   - component: {fileID: 691540193}
   - component: {fileID: 691540192}
   - component: {fileID: 691540191}
-  m_Layer: 5
+  m_Layer: 16
   m_Name: FillHeath
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1642,7 +1642,7 @@ GameObject:
   - component: {fileID: 943478707}
   - component: {fileID: 943478706}
   - component: {fileID: 943478709}
-  m_Layer: 3
+  m_Layer: 16
   m_Name: PlayerCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1729,7 +1729,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: 1062090225
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &943478709
@@ -1832,7 +1832,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1031798083}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1984,7 +1984,7 @@ GameObject:
   - component: {fileID: 1240581615}
   - component: {fileID: 1240581614}
   - component: {fileID: 1240581616}
-  m_Layer: 3
+  m_Layer: 16
   m_Name: PlayerBurningHead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2029,8 +2029,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1576604253
-  m_SortingLayer: 0
+  m_SortingLayerID: 1062090225
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -369452259, guid: cf4bb231f80b08949ba3345c5b63b676, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2462,7 +2462,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 1031798085}
-  m_PlaneDistance: 100
+  m_PlaneDistance: 1000
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -2471,8 +2471,8 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1028369205
+  m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!224 &1370362815
 RectTransform:
@@ -3790,8 +3790,8 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 906911928}
-  - {fileID: 383273571}
-  - {fileID: 1031798086}
   - {fileID: 1370362815}
+  - {fileID: 1031798086}
+  - {fileID: 383273571}
   - {fileID: 1259966752}
   - {fileID: 1170965842}

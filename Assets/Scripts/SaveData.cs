@@ -62,4 +62,10 @@ public class SaveData
                 break;
         }
     }
+
+    public void AddCoins(int amount)
+    {
+        Coins += amount;
+        Debug.Log("Добавлено " + amount + " монет. Текущий баланс: " + Coins);
+    }
 }

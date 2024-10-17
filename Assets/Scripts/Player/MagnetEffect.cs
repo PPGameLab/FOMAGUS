@@ -1,5 +1,4 @@
 using UnityEngine;
-
 public class MagnetEffect : MonoBehaviour
 {
     public float magnetRange = 5f;  // Радиус действия магнита (задается при старте боя)
@@ -23,20 +22,23 @@ public class MagnetEffect : MonoBehaviour
 
     private void Update()
     {
-        // Находим все объекты опыта в радиусе магнита
         Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, magnetRange);
         foreach (Collider2D hitCollider in hitColliders)
         {
             ExpObject xpObject = hitCollider.GetComponent<ExpObject>();
             if (xpObject != null)
             {
-                // Активируем магнет на объекте опыта
-                xpObject.ActivateMagnet(magnetSpeed);  // Передаем скорость притягивания
+                xpObject.ActivateMagnet(magnetSpeed);
             }
         }
     }
 
-    // Рисуем радиус магнита в редакторе для удобства настройки
+    public void IncreaseMagnetRange(float amount)
+    {
+        magnetRange += amount;
+        Debug.Log($"Magnet range increased by {amount}. New range: {magnetRange}");
+    }
+
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;

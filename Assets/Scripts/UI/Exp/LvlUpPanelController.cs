@@ -8,7 +8,14 @@ public class LvlUpPanelController : MonoBehaviour
     public Button fireball2UpgradeButton;  // Кнопка для улучшения Fireball2
     public Button cooldownReductionButton;  // Кнопка для уменьшения кулдауна
 
+    private CameraFollow cameraFollow;  // Мы убрали инициализацию здесь
+
     private PlayerSpells playerSpells;  // Ссылка на скрипт заклинаний игрока
+
+    void Awake()  // Вся инициализация, связанная с получением объектов сцены, здесь
+    {
+        cameraFollow = Camera.main.GetComponent<CameraFollow>();  // Инициализация CameraFollow в Awake
+    }
 
     void Start()
     {
@@ -24,6 +31,7 @@ public class LvlUpPanelController : MonoBehaviour
     // Метод для показа панели
     public void ShowPanel()
     {
+        cameraFollow.enabled = false;
         Time.timeScale = 0;  // Останавливаем игру
         lvlUpPanel.SetActive(true);  // Показываем панель
     }
@@ -31,6 +39,7 @@ public class LvlUpPanelController : MonoBehaviour
     // Метод для скрытия панели и продолжения игры
     public void HidePanel()
     {
+        cameraFollow.enabled = true;
         lvlUpPanel.SetActive(false);  // Скрываем панель
         Time.timeScale = 1;  // Возобновляем игру
     }
