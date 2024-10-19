@@ -3,25 +3,34 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - Summon
+  - Support
+  - Magic
+  - Ellite
+  - Boss
+  - Bonus
+  - Collectible
+  - Exp
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Oleg
+  - 
   - Water
   - UI
-  - Player
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - SummonLayer
+  - SupportLayer
+  - MagicLayer
+  - EnemyLayer
+  - EliteLayer
+  - BossLayer
+  - BonusLayer
+  - CollectibleLayer
+  - ExpLayer
+  - EnvironmentLayer
+  - PlayerLayer
   - 
   - 
   - 
@@ -41,9 +50,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Oleg
-    uniqueID: 107285885
+  - name: UI
+    uniqueID: 755230833
     locked: 0
-  - name: Player
-    uniqueID: 2718363043
+  - name: PlayerLayer
+    uniqueID: 1062090225
+    locked: 0
+  - name: MagicLayer
+    uniqueID: 2634214329
+    locked: 0
+  - name: EnemyLayer
+    uniqueID: 2761012085
+    locked: 0
+  - name: UI2
+    uniqueID: 3266598091
     locked: 0

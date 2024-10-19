@@ -45,5 +45,5 @@ EditorBuildSettings:
     path: Assets/Scenes/SC_UPGRADE.unity
     guid: 2134982b752677a4391a5554c0c17087
   m_configObjects:
-    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 6363a9921a7777f47825c4e7d8518bf0, type: 2}
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 5ff81ea079a27764297981b9f08723ff, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: dd44c0ed7fa3c284380411512022bf04, type: 2}
